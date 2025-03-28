@@ -3,6 +3,13 @@
 #### 介绍
 上位机工具
 
+[DMTool] 是一个闭源软件，本软件使用了 LGPLv3 版本的 Qt 库进行开发。具体使用的 Qt 库包括：QtCore、QtGui、QtSerialPort、QtCore5Compat 和 QtCharts。
+
+Copyright (C) [2025] The Qt Company Ltd. All rights reserved.
+Qt 和 Qt logo 是 The Qt Company Ltd. 的商标。
+
+本软件依据 LGPLv3 协议使用 Qt 库，如果你需要获取 Qt 库的源代码，可根据 LGPLv3 协议规定的方式进行获取。同时，本软件提供了重新链接 Qt 库的机制，以符合 LGPLv3 协议要求。
+
 #### 软件架构
 软件架构说明
 
@@ -15,9 +22,15 @@
 
 #### 使用说明
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+[DMTool-x86_64.AppImage]linux上位机
+
+如果安装了AppImage
+1.  >>sudo ./DMTool-x86_64.AppImage 即可运行
+如果没有安装AppImage（无法使用sudo运行.AppImage）
+1.  >>ls /dev/tyyACM* 查看串口设备名称
+2.  >>sudo chmod 666 /dev/ttyACM0 设置设备访问权限，这里的ttyACM0是串口设备名称，根据实际情况进行修改
+3.  >>sudo chmod +x DMTool-x86_64.AppImage 设置可执行权限
+4.  >>./DMTool-x86_64.AppImage 运行
 
 #### 参与贡献
 
