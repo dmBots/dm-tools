@@ -2,6 +2,7 @@
 
 #### 介绍
 DM调试工具支持DM-USB2CAN系列CAN卡，支持在windows下运行
+
 DM-USB2FDCAN上位机软件支持DM-USB2FDCAN和DM-USB2CAN系列CAN卡，支持在windows和linux下运行
 
 #### 版权与第三方协议

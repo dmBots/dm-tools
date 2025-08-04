@@ -2,6 +2,7 @@
 
 #### Description
 The DM debugging tool supports DM-USB2CAN series CAN cards and can run on Windows.
+
 The DM-USB2FDCAN host computer software supports DM-USB2FDCAN and DM-USB2CAN series CAN cards, and can run on both Windows and Linux.
 
 #### Copyright and Third-Party Agreements
