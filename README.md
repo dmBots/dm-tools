@@ -1,50 +1,66 @@
 # DM-Tools
 
 #### 介绍
-上位机工具
+DM调试工具支持DM-USB2CAN系列CAN卡，支持在windows下运行
+DM-USB2FDCAN上位机软件支持DM-USB2FDCAN和DM-USB2CAN系列CAN卡，支持在windows和linux下运行
 
-[DMTool] 是一个闭源软件，本软件使用了 LGPLv3 版本的 Qt 库进行开发。具体使用的 Qt 库包括：QtCore、QtGui、QtSerialPort、QtCore5Compat 和 QtCharts。
+#### 版权与第三方协议
+1. **软件版权**  
+   本软件为闭源软件，版权归 [达妙科技有限公司] 所有。
 
-Copyright (C) [2025] The Qt Company Ltd. All rights reserved.
-Qt 和 Qt logo 是 The Qt Company Ltd. 的商标。
+2. **第三方组件声明**  
+   本软件开发过程中使用了遵循 GNU Lesser General Public License Version 3（LGPLv3）协议的 Qt 库，具体包括：QtCore、QtGui、QtSerialPort、QtCore5Compat 及 QtCharts。  
 
-本软件依据 LGPLv3 协议使用 Qt 库，如果你需要获取 Qt 库的源代码，可根据 LGPLv3 协议规定的方式进行获取。同时，本软件提供了重新链接 Qt 库的机制，以符合 LGPLv3 协议要求。
+   Copyright (C) [2025] The Qt Company Ltd. 保留所有权利。Qt 及 Qt logo 均为 The Qt Company Ltd. 的商标。  
 
-#### 软件架构
-软件架构说明
+   根据 LGPLv3 协议规定，您有权获取本软件所使用的 Qt 库源代码，可通过 Qt 官方网站下载：[https://download.qt.io/archive/qt/](https://download.qt.io/archive/qt/)（请根据本软件实际使用的 Qt6.5.8 版本选择对应的源代码包）。  
 
-
-#### 安装教程
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
+   本软件采用动态链接方式调用 Qt 库，用户可直接替换程序目录中相关的 Qt DLL 文件，以使用经修改或适配后的 Qt 库版本，此机制符合 LGPLv3 协议要求。  
 
 #### 使用说明
+   **[DM-USB2FDCAN-x86_64.AppImage]linux上位机**
+1. **配置用户权限组**
+   ```markdown
+   # 查看设备信息
+   lsusb
+   # 创建 udev 规则文件
+   echo 'SUBSYSTEM=="usb", ATTR{idVendor}=="34b7", ATTR{idProduct}=="6877", MODE="0666", GROUP="plugdev"
+   SUBSYSTEM=="usb_device", ATTR{idVendor}=="34b7", ATTR{idProduct}=="6877", MODE="0666", GROUP="plugdev"' | sudo tee /etc/udev/rules.d/99-dm-fdcan.rules > /dev/null
+   # 重新加载 udev 规则
+   sudo udevadm control --reload-rules
+   sudo udevadm trigger
+   # 将当前用户加入 plugdev 组
+   sudo usermod -aG plugdev $USER
+   ```
+2. **运行**
+   ##### 已安装AppImage
+   ```markdown
+   # root权限运行运行
+   sudo ./DM-USB2FDCAN-x86_64.AppImage
+   ```
+   ##### 未安装AppImage（无法使用sudo运行.AppImage）
+   ```markdown
+   # 查看串口设备名称
+   ls /dev/tyyACM*
+   # 单独设置特定设备的访问权限（此处以串口设备ttyACM0为例，请根据实际设备名称修改）
+   sudo chmod 666 /dev/ttyACM0
+   # 或一次性授予同类设备的访问权限
+   sudo chmod 666 /dev/ttyACM*
+   # 设置可执行权限
+   sudo chmod +x DM-USB2FDCAN-x86_64.AppImage
+   # 运行
+   ./DM-USB2FDCAN-x86_64.AppImage
+   ```
 
-[DMTool-x86_64.AppImage]linux上位机
+#### 相关资源
 
-如果安装了AppImage
-1.  >>sudo ./DMTool-x86_64.AppImage 即可运行
-如果没有安装AppImage（无法使用sudo运行.AppImage）
-1.  >>ls /dev/tyyACM* 查看串口设备名称
-2.  >>sudo chmod 666 /dev/ttyACM0 设置设备访问权限，这里的ttyACM0是串口设备名称，根据实际情况进行修改
-3.  >>sudo chmod +x DMTool-x86_64.AppImage 设置可执行权限
-4.  >>./DMTool-x86_64.AppImage 运行
+1.  项目使用手册：[DM-USB2FDCAN使用手册.pdf](https://gitee.com/kit-miao/dm-usb2-fdcan/blob/master/%E4%B8%8A%E4%BD%8D%E6%9C%BA/README.md)
+2.  常见问题：[达妙电机FAQ](https://gl1po2nscb.feishu.cn/wiki/NGhYwis06iKQqTkUwa6ckRaSnld)
+3.  联系支持：[达妙论坛](https://bbs.dmbot.cn/tags)
 
-#### 参与贡献
+#### 达妙科技导航资料
 
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
-
-
-#### 特技
-
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+1. [客户帮助中心](https://gl1po2nscb.feishu.cn/wiki/MZ32w0qnnizTpOkNvAZcJ9SlnXb)
+2. [达妙产品资料Gitee总链接](https://gitee.com/kit-miao/damiao)
+3. [达妙产品资料Github总链接](https://github.com/dmBots/DAMIAO-Motor)
+4. [为方便各位上帝下载资料，敝司特意开通飞书连接，免登录直接下载链接](https://gl1po2nscb.feishu.cn/drive/folder/RJL7fFT4ll9PDSdvM6Pc5vntnPw)
