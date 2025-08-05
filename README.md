@@ -36,7 +36,7 @@ DM-USB2FDCAN上位机软件支持DM-USB2FDCAN和DM-USB2CAN系列CAN卡，支持�
 2. **运行**
    ##### 已安装AppImage
    ```markdown
-   # root权限运行运行
+   # root权限运行
    sudo ./DM-USB2FDCAN-x86_64.AppImage
    ```
    ##### 未安装AppImage（无法使用sudo运行.AppImage）
@@ -55,7 +55,7 @@ DM-USB2FDCAN上位机软件支持DM-USB2FDCAN和DM-USB2CAN系列CAN卡，支持�
 
 #### 相关资源
 
-1.  项目使用手册：[DM-USB2FDCAN使用手册.pdf](https://gitee.com/kit-miao/dm-usb2-fdcan/blob/master/%E4%B8%8A%E4%BD%8D%E6%9C%BA/README.md)
+1.  使用手册：[DM-USB2FDCAN使用手册.pdf](https://gitee.com/kit-miao/dm-usb2-fdcan/blob/master/%E4%B8%8A%E4%BD%8D%E6%9C%BA/README.md)
 2.  常见问题：[达妙电机FAQ](https://gl1po2nscb.feishu.cn/wiki/NGhYwis06iKQqTkUwa6ckRaSnld)
 3.  联系支持：[达妙论坛](https://bbs.dmbot.cn/tags)
 
