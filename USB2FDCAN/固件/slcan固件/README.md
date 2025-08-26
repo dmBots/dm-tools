@@ -16,7 +16,7 @@ DM-USB转CANFD模块支持使用SLCAN固件以适配部分用户在Linux环境�
 
 <u>下载slcan固件</u>（目前稳定发行的slcan固件版本为1.0.0.2）
 
-![firmware](.\img\firmware.png)
+![firmware](./img/firmware.png)
 
 <u>固件升级</u>
 
@@ -114,7 +114,7 @@ candump vcan0
 
 ```bash
 sudo ip link set down vcan0    # 先关闭接口
-sudo slcand -c /dev/ttyACM  # 使用 slcand 关闭设备（具体命令可能略有差异）
+sudo slcand -c /dev/ttyACM6  # 使用 slcand 关闭设备（具体命令可能略有差异）
 # 或者通过杀掉 slcand 进程来清理
 ```
 
@@ -129,7 +129,7 @@ sudo slcand -c /dev/ttyACM  # 使用 slcand 关闭设备（具体命令可能略
 方法二：通过使用slcan协议命令 模块无需使用slcan的关闭命令也可直接切换波特率
 
 ```bash
-echo -e "S4\r" > /dev/ttyACM0  # 设置CAN波特率为500K 波特率序号看上文
+echo -e "S4\r" > /dev/ttyACM6  # 设置CAN波特率为500K 波特率序号看上文
 ```
 
 
