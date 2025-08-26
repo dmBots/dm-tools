@@ -16,7 +16,7 @@ DM-USB转CANFD模块支持使用SLCAN固件以适配部分用户在Linux环境�
 
 <u>下载slcan固件</u>（目前稳定发行的slcan固件版本为1.0.0.2）
 
-![firmware](E:\达妙工作目录\Git仓库\dm-tools\USB2FDCAN\固件\slcan固件\img\firmware.png)
+![firmware](.\img\firmware.png)
 
 <u>固件升级</u>
 
@@ -24,7 +24,7 @@ DM-USB转CANFD模块支持使用SLCAN固件以适配部分用户在Linux环境�
 
 P.S. 出厂固件和SLCAN固件可以互相切换，如需换回出厂固件请重新刷入最新的出厂固件即可。
 
-![update](E:\达妙工作目录\Git仓库\dm-tools\USB2FDCAN\固件\slcan固件\img\update.png)
+![update](.\img\update.png)
 
 ##### 2.查找设备
 
@@ -34,7 +34,7 @@ P.S. 出厂固件和SLCAN固件可以互相切换，如需换回出厂固件请�
 sudo ls /dev/ttyACM*
 ```
 
-![tty](E:\达妙工作目录\Git仓库\dm-tools\USB2FDCAN\固件\slcan固件\img\tty.png)
+![tty](.\img\tty.png)
 
 当前PC只插入了一个设备，可以看到存在一个虚拟串口号 **ttyACM6**
 
@@ -98,7 +98,7 @@ sudo ip link set up vcan0
 cansend vcan0 123#1122334455667788
 ```
 
-![cansend](E:\达妙工作目录\Git仓库\dm-tools\USB2FDCAN\固件\slcan固件\img\cansend.png)
+![cansend](.\img\cansend.png)
 
 打开一个新的终端窗口，使用candump vcan0指令来查看can总线上的收发情况
 
@@ -106,7 +106,7 @@ cansend vcan0 123#1122334455667788
 candump vcan0
 ```
 
-![candump](E:\达妙工作目录\Git仓库\dm-tools\USB2FDCAN\固件\slcan固件\img\candump.png)
+![candump](.\img\candump.png)
 
 ##### 6.关闭设备
 
