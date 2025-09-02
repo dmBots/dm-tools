@@ -4,11 +4,52 @@
 The DM-USB2FDCAN host computer software supports DM-USB2FDCAN series CAN cards and can run on both Windows and Linux operating systems.
 
 #### Version Update Notes
-1. **[v2.0.2.7-trial] - 2025.8.14**
+1. **[v2.0.3.0] - 2025.9.2**
+   ##### Major Updates:
+   - Optimize serial port switching speed
+   - Optimize adaptive adjustment of the Y-axis scale for the waveform control
+
+   ##### Bug Fixes:
+   - Fix abnormal software crash issue
+   - Using CAN to read and write parameters in the enabled state no longer results in power loss
+
+2. **[v2.0.2.9] - 2025.8.25**
+   ##### Major Updates:
+   - Restore the old upper computer style for the debugging and parameter configuration interface
+   - Modify the display format of the control block diagram to "table + text box + image"
+   - Add multi-curve saving function for the waveform control
+
+   ##### Bug Fixes:
+   - Update the default CAN ID to 0x01 and display the default ID simultaneously
+
+3. **[v2.0.2.8] - 2025.8.21**
+   ##### Major Updates:
+   - Add serial port reception settings (toggle for display, configurable display base: binary/decimal/hexadecimal)
+   - Significantly adjust UI layout:
+   - Move part of serial port configurations to the "Device Configuration" module
+   - Add a "Serial Port Queue Send" button
+   - Hide the "Calibration" tab by default on initial launch
+
+   ##### Bug Fixes:
+   - Fill the gap of missing FDCAN transmission length (48 bytes)
+
+4. **[v2.0.2.7] - 2025.8.19**
+   ##### Major Updates:
+   - Add arbitrary scaling function for the main interface
+   - Add auto-switch function for the control mode tab in the debugging interface (switches based on the motor mode read after parameter reading)
+   - Add sampling point display function in the FDCAN device configuration interface
+   - Remove the frame parsing function
+
+   ##### Bug Fixes:
+   - Fix speed mapping restriction outside MIT mode
+   - Fix white window issue of toolTip
+   - Fix misalignment issue of the "Calibration" tab
+
+5 **[v2.0.2.7-trial] - 2025.8.14**
    ##### Major Updates:
    - Added the function of arbitrary scaling for the main interface. Currently, this is only a trial version and will be optimized in subsequent updates.
 
-2. **[v2.0.2.6] - 2025.8.13**
+6. **[v2.0.2.6] - 2025.8.13**
    ##### Major Updates:
    - Added the serial port list sending function, which can be called up by pressing F3. It allows convenient customization of the serial port sending list and sending interval.
    - Added the local storage function for runtime crash logs. However, this function takes effect only after decompressing the executable file, and the logs are stored in the "logs" folder.
@@ -17,7 +58,7 @@ The DM-USB2FDCAN host computer software supports DM-USB2FDCAN series CAN cards a
    - Fixed the issue where the selection would be incorrectly reset under formatted input, causing the Ctrl combination keys to fail.
    - Fixed the issue where the reduction ratio (Gr) could not be imported correctly during parameter import.
 
-3. **[v2.0.2.5] - 2025.8.7**
+7. **[v2.0.2.5] - 2025.8.7**
    ##### Major Updates:
    - The logic for scanning devices on the bus has been rewritten to identify existing devices on the bus more accurately.
    - Additionally, the function of broadcasting read/write IDs in the debugging interface has been retained, and a secondary confirmation dialog has been added to prevent misoperations.
@@ -39,8 +80,8 @@ The DM-USB2FDCAN host computer software supports DM-USB2FDCAN series CAN cards a
     This software calls the Qt library through dynamic linking. Users can directly replace the relevant Qt DLL files in the program directory to use a modified or adapted version of the Qt library, which complies with the requirements of the LGPLv3.
 
 #### Instructions
-   **[DM-USB2FDCAN-x86_64.AppImage]linux host computer software**
-1. **Configure user permission groups**
+   **[DMTool-x86_64.AppImage]linux host computer software**
+1. **Configure user permission groups (Only required when using USB2FDCAN)**
    ```markdown
    # View device information
    lsusb
@@ -57,7 +98,7 @@ The DM-USB2FDCAN host computer software supports DM-USB2FDCAN series CAN cards a
    ##### Installed AppImage
    ```markdown
    # Run with root privileges
-   sudo ./DM-USB2FDCAN-x86_64.AppImage
+   sudo ./DMTool-x86_64.AppImage
    ```
    ##### Uninstalled AppImage (cannot run .AppImage using sudo)
    ```markdown
@@ -68,14 +109,14 @@ The DM-USB2FDCAN host computer software supports DM-USB2FDCAN series CAN cards a
    # Or grant access permissions to all devices of the same type at once
    sudo chmod 666 /dev/ttyACM*
    # Set executable permissions
-   sudo chmod +x DM-USB2FDCAN-x86_64.AppImage
+   sudo chmod +x DMTool-x86_64.AppImage
    # Run
-   ./DM-USB2FDCAN-x86_64.AppImage
+   ./DMTool-x86_64.AppImage
    ```
 
 #### Related Resources
 
-1.  User Manual:[DM-USB2FDCAN User Manual.pdf](https://gitee.com/kit-miao/dm-usb2-fdcan/blob/master/%E4%B8%8A%E4%BD%8D%E6%9C%BA/DM-USB2FDCAN使用手册.pdf)
+1.  User Manual:[DM-USB2FDCAN User Manual.pdf](https://gitee.com/kit-miao/dm-tools/blob/master/USB2FDCAN/%E8%BE%BE%E5%A6%99%E7%A7%91%E6%8A%80-USB%E8%BD%ACCANFD%E6%A8%A1%E5%9D%97%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E%E4%B9%A6V1.0(2).pdf)
 2.  Frequently Asked Questions:[DAMIAO Motor FAQ](https://gl1po2nscb.feishu.cn/wiki/NGhYwis06iKQqTkUwa6ckRaSnld)
 3.  Contact Support:[DAMIAO Forum](https://bbs.dmbot.cn/tags)
 

@@ -4,11 +4,49 @@
 DM-USB2FDCAN上位机软件支持DM-USB2FDCAN系列CAN卡，支持在windows和linux下运行
 
 #### 版本更新说明
-1. **[v2.0.2.7-trial] - 2025.8.14**
+1. **[v2.0.3.0] - 2025.9.2**
+   ##### 主要更新：
+   - 优化串口开关速度
+   - 优化波形控件纵坐标刻度的自适应调整
+
+   ##### 问题修复：
+   - 修复了软件异常崩溃问题
+   - 使能状态下使用CAN读写参数不再掉电
+
+2. **[v2.0.2.9] - 2025.8.25**
+   ##### 主要更新：
+   - 调试与参数设置界面恢复老上位机样式
+   - 控制框图展示形式修改为表格+文本框+图片形式
+   - 补充波形控件多曲线保存功能
+
+   ##### 问题修复：
+   - 默认CAN ID修改为0x01，同时展示默认ID
+
+3. **[v2.0.2.8] - 2025.8.21**
+   ##### 主要更新：
+   - 新增串口接收设置（显示与否、显示进制）
+   - 大幅调整UI布局（将部分串口配置移到设备配置中，新增串口队列发送按键，初始隐藏校准标签页）
+
+   ##### 问题修复：
+   - 填补FDCAN发送长度48的缺失
+
+4. **[v2.0.2.7] - 2025.8.19**
+   ##### 主要更新：
+   - 添加了主界面任意缩放功能。
+   - 添加读参数后根据读取的电机模式自动切换调试界面的控制模式标签页的功能。
+   - 添加FDCAN设备配置界面新增采样点展示功能。
+   - 砍掉了帧解析功能。
+
+   ##### 问题修复：
+   - 修复MIT模式外的速度映射受限
+   - 修复toolTip白窗
+   - 修复了校准标签页错位问题
+
+5. **[v2.0.2.7-trial] - 2025.8.14**
    ##### 主要更新：
    - 添加了主界面任意缩放功能。当前仅为试用版本，后续会进行优化。
 
-2. **[v2.0.2.6] - 2025.8.13**
+6. **[v2.0.2.6] - 2025.8.13**
    ##### 主要更新：
    - 添加串口列表发送功能，F3调出。可便捷地自定义串口发送列表以及发送间隔。
    - 添加运行崩溃日志本地存储功能，但需要解压可执行文件后才能生效，日志存储在logs文件夹下。
@@ -18,7 +56,7 @@ DM-USB2FDCAN上位机软件支持DM-USB2FDCAN系列CAN卡，支持在windows和l
    - 修复在格式化输入下会错误重置选区导致ctrl组合键失效的问题。
    - 修复参数导入无法正确导入减速比Gr的问题。
 
-3. **[v2.0.2.5] - 2025.8.7**
+7. **[v2.0.2.5] - 2025.8.7**
    ##### 主要更新：
    - 重写扫描总线上设备逻辑，可以更准确的识别总线上所存在的设备；
    - 同时保留了调试界面下广播读写ID的功能，添加了二次确认对话框防止误操作。
@@ -40,8 +78,8 @@ DM-USB2FDCAN上位机软件支持DM-USB2FDCAN系列CAN卡，支持在windows和l
    本软件采用动态链接方式调用 Qt 库，用户可直接替换程序目录中相关的 Qt DLL 文件，以使用经修改或适配后的 Qt 库版本，此机制符合 LGPLv3 协议要求。  
 
 #### 使用说明
-   **[DM-USB2FDCAN-x86_64.AppImage]linux上位机**
-1. **配置用户权限组**
+   **[DMTool-x86_64.AppImage]linux上位机**
+1. **配置用户权限组（仅使用USB2FDCAN需要）**
    ```markdown
    # 查看设备信息
    lsusb
@@ -58,7 +96,7 @@ DM-USB2FDCAN上位机软件支持DM-USB2FDCAN系列CAN卡，支持在windows和l
    ##### 已安装AppImage
    ```markdown
    # root权限运行
-   sudo ./DM-USB2FDCAN-x86_64.AppImage
+   sudo ./DMTool-x86_64.AppImage
    ```
    ##### 未安装AppImage（无法使用sudo运行.AppImage）
    ```markdown
@@ -69,14 +107,14 @@ DM-USB2FDCAN上位机软件支持DM-USB2FDCAN系列CAN卡，支持在windows和l
    # 或一次性授予同类设备的访问权限
    sudo chmod 666 /dev/ttyACM*
    # 设置可执行权限
-   sudo chmod +x DM-USB2FDCAN-x86_64.AppImage
+   sudo chmod +x DMTool-x86_64.AppImage
    # 运行
-   ./DM-USB2FDCAN-x86_64.AppImage
+   ./DMTool-x86_64.AppImage
    ```
 
 #### 相关资源
 
-1.  使用手册：[DM-USB2FDCAN使用手册.pdf](https://gitee.com/kit-miao/dm-usb2-fdcan/blob/master/%E4%B8%8A%E4%BD%8D%E6%9C%BA/README.md)
+1.  使用手册：[DM-USB2FDCAN使用手册.pdf](https://gitee.com/kit-miao/dm-tools/blob/master/USB2FDCAN/%E8%BE%BE%E5%A6%99%E7%A7%91%E6%8A%80-USB%E8%BD%ACCANFD%E6%A8%A1%E5%9D%97%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E%E4%B9%A6V1.0(2).pdf)
 2.  常见问题：[达妙电机FAQ](https://gl1po2nscb.feishu.cn/wiki/NGhYwis06iKQqTkUwa6ckRaSnld)
 3.  联系支持：[达妙论坛](https://bbs.dmbot.cn/tags)
 
