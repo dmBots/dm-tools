@@ -4,7 +4,12 @@
 The DM-USB2FDCAN host computer software supports DM-USB2FDCAN series CAN cards and can run on both Windows and Linux operating systems.
 
 #### Version Update Notes
-1. **[v2.0.3.0] - 2025.9.2**
+1. **[v2.0.3.1] - 2025.9.4**
+   ##### Bug Fixes:
+   - Fix the remote frame ID length limitation
+   - Fix the Y-axis display anomaly of the waveform saving control
+
+2. **[v2.0.3.0] - 2025.9.2**
    ##### Major Updates:
    - Optimize serial port switching speed
    - Optimize adaptive adjustment of the Y-axis scale for the waveform control
@@ -13,7 +18,7 @@ The DM-USB2FDCAN host computer software supports DM-USB2FDCAN series CAN cards a
    - Fix abnormal software crash issue
    - Using CAN to read and write parameters in the enabled state no longer results in power loss
 
-2. **[v2.0.2.9] - 2025.8.25**
+3. **[v2.0.2.9] - 2025.8.25**
    ##### Major Updates:
    - Restore the old upper computer style for the debugging and parameter configuration interface
    - Modify the display format of the control block diagram to "table + text box + image"
@@ -22,7 +27,7 @@ The DM-USB2FDCAN host computer software supports DM-USB2FDCAN series CAN cards a
    ##### Bug Fixes:
    - Update the default CAN ID to 0x01 and display the default ID simultaneously
 
-3. **[v2.0.2.8] - 2025.8.21**
+4. **[v2.0.2.8] - 2025.8.21**
    ##### Major Updates:
    - Add serial port reception settings (toggle for display, configurable display base: binary/decimal/hexadecimal)
    - Significantly adjust UI layout:
@@ -33,7 +38,7 @@ The DM-USB2FDCAN host computer software supports DM-USB2FDCAN series CAN cards a
    ##### Bug Fixes:
    - Fill the gap of missing FDCAN transmission length (48 bytes)
 
-4. **[v2.0.2.7] - 2025.8.19**
+5. **[v2.0.2.7] - 2025.8.19**
    ##### Major Updates:
    - Add arbitrary scaling function for the main interface
    - Add auto-switch function for the control mode tab in the debugging interface (switches based on the motor mode read after parameter reading)
@@ -45,11 +50,11 @@ The DM-USB2FDCAN host computer software supports DM-USB2FDCAN series CAN cards a
    - Fix white window issue of toolTip
    - Fix misalignment issue of the "Calibration" tab
 
-5 **[v2.0.2.7-trial] - 2025.8.14**
+6. **[v2.0.2.7-trial] - 2025.8.14**
    ##### Major Updates:
    - Added the function of arbitrary scaling for the main interface. Currently, this is only a trial version and will be optimized in subsequent updates.
 
-6. **[v2.0.2.6] - 2025.8.13**
+7. **[v2.0.2.6] - 2025.8.13**
    ##### Major Updates:
    - Added the serial port list sending function, which can be called up by pressing F3. It allows convenient customization of the serial port sending list and sending interval.
    - Added the local storage function for runtime crash logs. However, this function takes effect only after decompressing the executable file, and the logs are stored in the "logs" folder.
@@ -58,7 +63,7 @@ The DM-USB2FDCAN host computer software supports DM-USB2FDCAN series CAN cards a
    - Fixed the issue where the selection would be incorrectly reset under formatted input, causing the Ctrl combination keys to fail.
    - Fixed the issue where the reduction ratio (Gr) could not be imported correctly during parameter import.
 
-7. **[v2.0.2.5] - 2025.8.7**
+8. **[v2.0.2.5] - 2025.8.7**
    ##### Major Updates:
    - The logic for scanning devices on the bus has been rewritten to identify existing devices on the bus more accurately.
    - Additionally, the function of broadcasting read/write IDs in the debugging interface has been retained, and a secondary confirmation dialog has been added to prevent misoperations.
