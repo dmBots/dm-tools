@@ -39,6 +39,14 @@ The DM-USB2FDCAN host computer software supports DM-USB2FDCAN series CAN cards a
    ```
 
 #### Version Update Notes
+- **[v2.1.4.0] - 2025.11.3**
+   ##### Major Updates:
+   - Supports CANOpen (EDS dictionary import, SDO read/write, graphical PDO mapping configuration)
+   - Added a settings interface (supports free configuration of the displayed data point count for the waveform control)
+
+   ##### Bug Fixes:
+   - Fixed the crash caused by configuring a custom baud rate when the FDCAN device is not opened.
+
 - **[v2.0.3.7] - 2025.10.10**
    ##### Bug Fixes:
    - Using hardware timestamps to sort data frames has fixed the issue where the debug waveform showed abnormal patterns due to data out-of-order.
