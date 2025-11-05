@@ -39,6 +39,12 @@ The DM-USB2FDCAN host computer software supports DM-USB2FDCAN series CAN cards a
    ```
 
 #### Version Update Notes
+- **[v2.1.4.2] - 2025.11.5**
+   ##### Major Updates:
+   - Supports gsusb firmware
+   - CANOpen-related interfaces are initially hidden and will be displayed after checking the "CANOpen" checkbox in the settings interface.
+   - Hardware timestamp sorting is initially disabled; it can be enabled by checking the corresponding checkbox in the settings interface.
+
 - **[v2.1.4.0] - 2025.11.3**
    ##### Major Updates:
    - Supports CANOpen (EDS dictionary import, SDO read/write, graphical PDO mapping configuration)
