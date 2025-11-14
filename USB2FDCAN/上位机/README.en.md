@@ -39,6 +39,13 @@ The DM-USB2FDCAN host computer software supports DM-USB2FDCAN series CAN cards a
    ```
 
 #### Version Update Notes
+- **[v2.1.4.4] - 2025.11.14**
+   ##### Major Updates:
+   - Add USB2CAN module baud rate setting in the device configuration page
+
+   ##### Bug Fixes:
+   - Fix the issue where frame ID changes do not take effect immediately in the CAN analyzer
+
 - **[v2.1.4.2] - 2025.11.5**
    ##### Major Updates:
    - Supports gsusb firmware
