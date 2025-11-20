@@ -39,6 +39,14 @@ The DM-USB2FDCAN host computer software supports DM-USB2FDCAN series CAN cards a
    ```
 
 #### Version Update Notes
+- **[v2.1.4.6] - 2025.11.20**
+   ##### Major Updates:
+   - Extend endian conversion for 1, 2 Byte uint
+
+   ##### Bug Fixes:
+   - Fix the parameter reading failure bug in the v2 motor driver board
+   - Fix errors of regular expression in EDS file parsing
+
 - **[v2.1.4.5] - 2025.11.18**
    ##### Bug Fixes:
    - Resolve errors in feedback frame data parsing
