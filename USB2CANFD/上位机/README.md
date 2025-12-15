@@ -56,7 +56,7 @@ DM-USB2FDCAN上位机软件支持DM-USB2FDCAN系列CAN卡，支持在windows和l
 
    ##### 主要更新
 
-   - 适配单双CAN路CAN新固件(单路FDCAN固件要求v1.0.0.4以上)，新增了错误帧计数
+   - 适配usb2canfd_dual模块和单路usb2fdcan模块新固件(单路固件要求v1.0.0.4及以上)，新增了错误帧计数
 
    ##### 问题修复：
 
