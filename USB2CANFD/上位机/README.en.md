@@ -39,6 +39,22 @@ The DM-USB2FDCAN host computer software supports DM-USB2FDCAN series CAN cards a
    ```
 
 #### Version Update Notes
+- **[V2.1.5.3] - 2025.12.15**
+  ##### Major Updates:
+
+  - Fixed incorrect error-frame counting.
+
+- **[v2.1.5.2] - 2025.12.12**
+
+   ##### Major Updates:
+
+   - Added support for new single- and dual-CAN firmware (single-channel FDCAN firmware requires v1.0.0.4 or later); added error-frame counting.
+
+   ##### Bug Fixes:
+
+   - Fixed CAN analyzer index counting error.
+   - Fixed feedback-frame error-code display (e.g., 0x08 incorrectly shown as 0xF8).
+
 - **[v2.1.4.6] - 2025.11.20**
    ##### Major Updates:
    - Extend endian conversion for 1, 2 Byte uint
