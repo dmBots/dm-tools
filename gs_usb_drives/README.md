@@ -1,7 +1,5 @@
 # CAN USB Driver Toolkits<=>CAN USB 驱动程序工具包
 
-**English** 
-
 ## Project Overview
 
 > This repository contains specialized CAN USB driver toolkits for different embedded platforms. Each toolkit includes pre-compiled kernel modules and source code for various kernel versions.
