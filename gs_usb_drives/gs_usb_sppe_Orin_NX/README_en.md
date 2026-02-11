@@ -29,7 +29,7 @@ gs_usb_sppe_Orin_NX
 ```
 
 
-### 编译模块
+### Compiling the Module
 - Navigate to the appropriate folder based on your kernel version
 - If you are not sure whether the module is usable, you can try recompiling it. If you have verified it many times, you can directly load the kernel.
 - The gs_usb configuration varies across different kernel versions, so it cannot be used across different kernels or platforms (such as for RK3588 series boards).
