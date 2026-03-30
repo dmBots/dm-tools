@@ -106,7 +106,8 @@ bool linkx_switch_can_channel(linkx_t* linkx,uint8_t channel,bool enable)
 {
     if (channel>=LINKX_CAN_CHANNEL_NUM)
         return false;
-    ecx_SDOwrite(linkx->master, linkx->slave_id, 0x8001, channel+1, false, 1,&enable,300);
+    uint8_t wrd_data=enable?1:0;
+    int wkc=ecx_SDOwrite(linkx->master, linkx->slave_id, 0x8001, channel+1, false, 1,&wrd_data,5000);
 }
 
 
@@ -115,7 +116,7 @@ void linkx_recv_pdos(linkx_t* linkx)
     /* receive pdos from slave  pData=master inputs*/
     for (int i=0;i<LINKX_CAN_CHANNEL_NUM;i++)
     {
-        memcpy(&linkx->rx_pdos[i],linkx->slave->inputs+i*sizeof(can_rx_pdo_t),sizeof(can_rx_pdo_t));
+        memcpy(&linkx->tx_pdos[i],linkx->slave->inputs+i*sizeof(can_tx_pdo_t),sizeof(can_tx_pdo_t));
     }
 }
 
@@ -125,7 +126,7 @@ void linkx_send_pdos(linkx_t* linkx)
     /* transmit pdos to slave pData=master outputs*/
     for (int i=0;i<LINKX_CAN_CHANNEL_NUM;i++)
     {
-        memcpy(linkx->slave->outputs+i*sizeof(can_tx_pdo_t),&linkx->tx_pdos[i],sizeof(can_tx_pdo_t));
+        memcpy(linkx->slave->outputs+i*sizeof(can_rx_pdo_t),&linkx->rx_pdos[i],sizeof(can_rx_pdo_t));
     }
 }
 

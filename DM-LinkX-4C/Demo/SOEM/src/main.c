@@ -6,7 +6,7 @@
 
 char adapter_name[16][128];
 
-static uint8 IOmap[4096];
+static uint8 IOmap[4*1024]={0};
 static ecx_contextt ctx;
 
 static linkx_t linkx;
@@ -23,7 +23,7 @@ void pdo_thread_func()
         ecx_send_processdata(linkx.master);
         ecx_receive_processdata(linkx.master,EC_TIMEOUTRET);
         linkx_recv_pdos(&linkx);
-        osal_usleep(10);
+        osal_usleep(40);
     }
 
 }
@@ -71,36 +71,54 @@ int main()
     fflush(stdout);
     ec_groupt *group = &ctx.grouplist[0];
 
-    ecx_config_map_group(&ctx, IOmap, 0);
+
+    int slave_cnt=ecx_config_init(&ctx);
+    // while (ctx.ecaterror)
+    //     printf_s("%s", ecx_elist2string(&ctx));
+
+
+    fflush(stdout);
+    if (slave_cnt<=0)
+    {
+        printf_s("No slaves found!\n");
+        return 0;
+    }
+
+    printf_s(" %d slaves found \n",slave_cnt);
+
+    int io_size=ecx_config_map_group(&ctx, IOmap, 0);
+
 
     ecx_configdc(&ctx);
-    while (ctx.ecaterror)
-        printf_s("%s", ecx_elist2string(&ctx));
-
-    ecx_config_init(&ctx);
-    printf_s("%d slaves found and configured.\n", ctx.slavecount);
-    fflush(stdout);
-    if (ctx.slavecount==0)
-        return 0;
+    ecx_dcsync0(&ctx,1,true, 50*1000, 10*1000);
 
     ecx_statecheck(&ctx, 0, EC_STATE_SAFE_OP, EC_TIMEOUTSTATE * 2);
-    // ecx_send_processdata(&ctx);
-    // ecx_receive_processdata(&ctx, EC_TIMEOUTRET);
 
+
+    ecx_send_processdata(&ctx);
+    ecx_receive_processdata(&ctx, EC_TIMEOUTRET);
 
 
     linkx_init(&linkx,1,&ctx);
 
-    if (linkx_start(&linkx))
-        osal_thread_create_rt(&thread_handle,8*1024*1024, pdo_thread_func, NULL);
 
-    // bool result=false;
-    // result=linkx_read_baudrate(&linkx,0);
-    // printf_s("%s",linkx_get_error_string(&linkx));
-    // fflush(stdout);
-    // result=linkx_read_baudrate(&linkx,1);
-    // result=linkx_read_baudrate(&linkx,2);
-    // result=linkx_read_baudrate(&linkx,3);
+    for (int i=0;i<LINKX_CAN_CHANNEL_NUM;i++)
+    {
+        linkx_switch_can_channel(&linkx,i,true);
+    }
+
+    if (linkx_start(&linkx))
+    {
+        osal_thread_create_rt(&thread_handle,4*1024*1024, pdo_thread_func, NULL);
+        printf_s("pdo thread started!\n");
+    }
+
+    while (thread_run)
+    {
+
+
+    }
+
 
     ec_free_adapters(head);
     return 0;
