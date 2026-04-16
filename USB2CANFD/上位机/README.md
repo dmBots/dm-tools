@@ -1,5 +1,7 @@
 # DM-USB2FDCAN Host Software
 
+中文 | [EN](./README.en.md) | [GitHub English](https://github.com/dmBots/dmBot/blob/master/8.工具和上位机/dm-tools/USB2CANFD/上位机/README.md)
+
 ## Overview
 
 - 本目录是 USB2CANFD 上位机入口，负责告诉你不同系统该下载哪个包，以及下一步该看哪个安装文档。

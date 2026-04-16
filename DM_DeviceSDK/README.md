@@ -1,5 +1,7 @@
 # DM_DeviceSDK
 
+中文 | [EN](./README.en.md) | [GitHub English](https://github.com/dmBots/dmBot/blob/master/8.工具和上位机/dm-tools/DM_DeviceSDK/README.md)
+
 ## 概述
 
 - 本目录是达妙 USB 类设备通用 SDK 的总入口。

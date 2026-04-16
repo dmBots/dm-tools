@@ -1,5 +1,7 @@
 # DM-USB2FDCAN
 
+中文 | [EN](./README.en.md) | [GitHub English](https://github.com/dmBots/dmBot/blob/master/8.工具和上位机/dm-tools/USB2CANFD/README.md)
+
 ## 概述
 
 - 本目录是 USB2CANFD 模块的总入口，适合先判断你是要下载工具、跑上位机、切换固件还是接 SDK。

@@ -1,5 +1,7 @@
 # DM-Tools
 
+中文 | [EN](./README.en.md) | [GitHub English](https://github.com/dmBots/dmBot/blob/master/8.工具和上位机/dm-tools/README.md)
+
 ## 概述
 
 - 这里是客户查找 USB2CANFD 工具、上位机、固件、SDK 和常用驱动资料的统一入口。
