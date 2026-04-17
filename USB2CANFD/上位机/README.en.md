@@ -1,6 +1,6 @@
-# DM-USB2FDCAN Host Software
+# DM-USB2CANFD Host Software
 
-[EN](./README.en.md) | [中文](./README.md) | [GitHub English](https://github.com/dmBots/dmBot/blob/master/8.工具和上位机/dm-tools/USB2CANFD/上位机/README.md)
+[EN](./README.en.md) | [中文](./README.md) | [GitHub English](https://github.com/dmBots/dmBot/blob/master/8.Tools%20and%20Host%20Software/dm-tools/USB2CANFD/Host%20Applications/README.md)
 
 ## Overview
 - This is the supplemental English entry page for the host software package.
@@ -10,8 +10,8 @@
 - [SETUP.md](SETUP.md)
 - [DMTool-v2.0.3.4-arm64.app/](DMTool-v2.0.3.4-arm64.app/)
 - [DMTool-v2.0.3.4-x86_64.app/](DMTool-v2.0.3.4-x86_64.app/)
-- [DMTool v2.1.5.3-x86_64.AppImage](DMTool v2.1.5.3-x86_64.AppImage)
-- [DMTool v2.1.5.3.exe](DMTool v2.1.5.3.exe)
+- [DMTool v2.1.5.3-x86_64.AppImage](DMTool%20v2.1.5.3-x86_64.AppImage)
+- [DMTool v2.1.5.3.exe](DMTool%20v2.1.5.3.exe)
 - [DMTool上位机软件说明书.pdf](DMTool上位机软件说明书.pdf)
 
 ## Quick Start

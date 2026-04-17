@@ -1,6 +1,6 @@
 # DM_DeviceSDK
 
-[EN](./README.en.md) | [中文](./README.md) | [GitHub English](https://github.com/dmBots/dmBot/blob/master/8.工具和上位机/dm-tools/DM_DeviceSDK/README.md)
+[EN](./README.en.md) | [中文](./README.md) | [GitHub English](https://github.com/dmBots/dmBot/blob/master/8.Tools%20and%20Host%20Software/dm-tools/DM_DeviceSDK/README.md)
 
 This is the lightweight English entry for the generic USB device SDK path in the Gitee repository.
 

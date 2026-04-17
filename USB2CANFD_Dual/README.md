@@ -1,10 +1,13 @@
 # DM-USB2CANFD Dual
 
+中文主版
+
 ## 概述
 - 本目录是双路 `USB2CANFD` 模块的公开资料入口。
 - 说明书、模型和 `socketcan` 固件资料都从这里进入。
 
 ## 文档 / 资源
+- [../README.md](../README.md) - 返回 `dm-tools` 总入口
 - [DM-USB2CANFD_Dual 模块使用说明书 V1.0.pdf](DM-USB2CANFD_Dual%20模块使用说明书%20V1.0.pdf) - 先看模块说明书。
 - [模型/](模型/) - 结构模型资料。
 - [固件/](固件/) - 固件资源入口。

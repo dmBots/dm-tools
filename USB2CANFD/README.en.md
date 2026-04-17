@@ -1,6 +1,6 @@
-# DM-USB2FDCAN
+# DM-USB2CANFD
 
-[EN](./README.en.md) | [中文](./README.md) | [GitHub English](https://github.com/dmBots/dmBot/blob/master/8.工具和上位机/dm-tools/USB2CANFD/README.md)
+[EN](./README.en.md) | [中文](./README.md) | [GitHub English](https://github.com/dmBots/dmBot/blob/master/8.Tools%20and%20Host%20Software/dm-tools/USB2CANFD/README.md)
 
 This is the lightweight English entry for the Gitee USB2CANFD path.
 

@@ -1,4 +1,6 @@
-# DM_DeviceSDK / C&C++
+﻿# DM_DeviceSDK / C&C++
+
+中文主版
 
 ## 概述
 
@@ -9,10 +11,11 @@
 ## 文档 / 资源
 
 - [USAGE.md](./USAGE.md) - 快速接入主流程；先看这里
+- [../README.md](../README.md) - 返回 DM_DeviceSDK 总入口
 - [example/](./example/) - 最小初始化与发送示例
 - [lib/](./lib/) - 头文件和预编译库
 - [UPDATE.md](./UPDATE.md) - 版本更新记录
-- [../../../../docs/mirror-scope.md](../../../../docs/mirror-scope.md) - GitHub / Gitee 覆盖差异
+- [../../../../docs/repository/mirror-scope.md](../../../../docs/repository/mirror-scope.md) - GitHub / Gitee 覆盖差异
 
 ## 快速开始
 
@@ -26,3 +29,4 @@
 - ZH: 主版入口
 - EN: Translation pending
 - TBD: 更细的平台级示例后续按需要拆分
+
