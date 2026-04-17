@@ -1,6 +1,6 @@
 # DM-Tools
 
-[EN](./README.en.md) | [中文](./README.md) | [GitHub English](https://github.com/dmBots/dmBot/blob/master/8.Tools%20and%20Host%20Software/dm-tools/README.md)
+[EN](./README.en.md) | [中文](./README.md) | GitHub showcase repo: `dmBots/dmBot`
 
 This is the lightweight English entry for the Gitee `dm-tools` tree.
 

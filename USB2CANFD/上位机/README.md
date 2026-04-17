@@ -1,6 +1,6 @@
 # DM-USB2CANFD Host Software
 
-中文 | [EN](./README.en.md) | [GitHub English](https://github.com/dmBots/dmBot/blob/master/8.Tools%20and%20Host%20Software/dm-tools/USB2CANFD/Host%20Applications/README.md)
+中文 | [EN](./README.en.md) | GitHub 英文展示仓：`dmBots/dmBot`
 
 ## Overview
 
