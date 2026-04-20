@@ -10,28 +10,94 @@ DM-USB2FDCAN上位机软件支持DM-USB2FDCAN系列CAN卡，支持在windows和l
 
 1. **配置用户权限组（仅使用USB2FDCAN需要）**
 
-    ```markdown
-    # 查看设备信息
-    lsusb
-    eg.
-    Bus 001 Device 069: ID 34b7:6877 DaMiao-Tech DM-USB2FDCAN
-    VID 34b7, PID 6877
-    注意：单路模块与双路模块的PID与VID不同！！！
-    # 创建 udev 规则文件 (Debian/Ubuntu)
-    echo 'SUBSYSTEM=="usb", ATTR{idVendor}=="34b7", ATTR{idProduct}=="6877", MODE="0666", GROUP="plugdev"
-    SUBSYSTEM=="usb_device", ATTR{idVendor}=="34b7", ATTR{idProduct}=="6877", MODE="0666", GROUP="plugdev"' | sudo tee /etc/udev/rules.d/99-dm-fdcan.rules > /dev/null
-    # 创建 udev 规则文件 (Arch)
-    echo 'SUBSYSTEM=="usb", ATTR{idVendor}=="34b7", ATTR{idProduct}=="6877", MODE="0666", GROUP="uucp", TAG+="uaccess"
-    SUBSYSTEM=="usb_device", ATTR{idVendor}=="34b7", ATTR{idProduct}=="6877", MODE="0666", GROUP="uucp"', TAG+="uaccess" | sudo tee /etc/udev/rules.d/99-dm-fdcan.rules > /dev/null
-    注意：Arch用户需要自行运行 arch_lib_install.sh 下载依赖
-    # 重新加载 udev 规则
-    sudo udevadm control --reload-rules
-    sudo udevadm trigger
-    # 将当前用户加入 plugdev 组
-    sudo usermod -aG plugdev $USER
-    ```
+<html>
+<table style="margin-left: auto; margin-right: auto; border-collapse: collapse; width: 100%; max-width: 1200px;">
+  <tr style="background: linear-gradient(90deg, #e95420, #1793d1); color: white; font-weight: bold;">
+    <td style="padding: 12px; text-align: center; width: 50%;">Debian/Ubuntu</td>
+    <td style="padding: 12px; text-align: center; width: 50%;">Arch Linux</td>
+  </tr>
+  
+  <!-- 查看设备信息行 -->
+  <tr style="border-bottom: 1px solid #eee;">
+    <td style="padding: 15px; vertical-align: top; background: #f9f9f9;">
+      <div style="color: #e95420; font-weight: bold; margin-bottom: 8px;">查看设备信息</div>
+      <pre style="background: #2d2d2d; color: #f8f8f2; padding: 12px; border-radius: 6px; overflow-x: auto; margin: 8px 0; font-size: 13px; line-height: 1.4;">
+lsusb
+eg.
+Bus 001 Device 069: ID 34b7:6877 DaMiao-Tech DM-USB2FDCAN
+VID 34b7, PID 6877</pre>
+    </td>
+    <td style="padding: 15px; vertical-align: top; background: #f9f9f9;">
+      <div style="color: #1793d1; font-weight: bold; margin-bottom: 8px;">查看设备信息</div>
+      <pre style="background: #2d2d2d; color: #f8f8f2; padding: 12px; border-radius: 6px; overflow-x: auto; margin: 8px 0; font-size: 13px; line-height: 1.4;">
+lsusb
+eg.
+Bus 001 Device 069: ID 34b7:6877 DaMiao-Tech DM-USB2FDCAN
+VID 34b7, PID 6877</pre>
+    </td>
+  </tr>
+  
+  <!-- 注意行 -->
+  <tr style="border-bottom: 1px solid #eee;">
+    <td colspan="2" style="padding: 15px; text-align: center; background: #fff3cd; color: #856404; font-weight: bold;">
+      ⚠️ 注意：单路模块与双路模块的PID与VID不同！！！
+    </td>
+  </tr>
+  
+  <!-- 创建udev规则文件行 -->
+  <tr style="border-bottom: 1px solid #eee;">
+    <td style="padding: 15px; vertical-align: top;">
+      <div style="color: #e95420; font-weight: bold; margin-bottom: 8px;">创建 udev 规则文件</div>
+      <pre style="background: #2d2d2d; color: #f8f8f2; padding: 12px; border-radius: 6px; overflow-x: auto; margin: 8px 0; font-size: 12px; line-height: 1.3;">
+echo 'SUBSYSTEM=="usb", ATTR{idVendor}=="34b7", ATTR{idProduct}=="6877", MODE="0666", GROUP="plugdev"
+SUBSYSTEM=="usb_device", ATTR{idVendor}=="34b7", ATTR{idProduct}=="6877", MODE="0666", GROUP="plugdev"' | sudo tee /etc/udev/rules.d/99-dm-fdcan.rules > /dev/null</pre>
+    </td>
+    <td style="padding: 15px; vertical-align: top;">
+      <div style="color: #1793d1; font-weight: bold; margin-bottom: 8px;">创建 udev 规则文件</div>
+      <pre style="background: #2d2d2d; color: #f8f8f2; padding: 12px; border-radius: 6px; overflow-x: auto; margin: 8px 0; font-size: 12px; line-height: 1.3;">
+echo 'SUBSYSTEM=="usb", ATTR{idVendor}=="34b7", ATTR{idProduct}=="6877", MODE="0666", GROUP="uucp", TAG+="uaccess"
+SUBSYSTEM=="usb_device", ATTR{idVendor}=="34b7", ATTR{idProduct}=="6877", MODE="0666", GROUP="uucp", TAG+="uaccess"' | sudo tee /etc/udev/rules.d/99-dm-fdcan.rules > /dev/null</pre>
+      <div style="background: #f8d7da; color: #721c24; padding: 8px; border-radius: 4px; margin-bottom: 8px; font-size: 13px;">
+        ⚠️ 注意：Arch用户需要自行运行 arch_lib_install.sh 下载依赖
+      </div>
+    </td>
+  </tr>
+  
+  <!-- 重新加载udev规则行 -->
+  <tr style="border-bottom: 1px solid #eee;">
+    <td style="padding: 15px; vertical-align: top;">
+      <div style="color: #e95420; font-weight: bold; margin-bottom: 8px;">重新加载 udev 规则</div>
+      <pre style="background: #2d2d2d; color: #f8f8f2; padding: 12px; border-radius: 6px; overflow-x: auto; margin: 8px 0; font-size: 13px; line-height: 1.4;">
+sudo udevadm control --reload-rules
+sudo udevadm trigger</pre>
+    </td>
+    <td style="padding: 15px; vertical-align: top;">
+      <div style="color: #1793d1; font-weight: bold; margin-bottom: 8px;">重新加载 udev 规则</div>
+      <pre style="background: #2d2d2d; color: #f8f8f2; padding: 12px; border-radius: 6px; overflow-x: auto; margin: 8px 0; font-size: 13px; line-height: 1.4;">
+sudo udevadm control --reload-rules
+sudo udevadm trigger</pre>
+    </td>
+  </tr>
+  
+  <!-- 添加用户到组行 -->
+  <tr>
+    <td style="padding: 15px; vertical-align: top;">
+      <div style="color: #e95420; font-weight: bold; margin-bottom: 8px;">将当前用户加入 plugdev 组</div>
+      <pre style="background: #2d2d2d; color: #f8f8f2; padding: 12px; border-radius: 6px; overflow-x: auto; margin: 8px 0; font-size: 13px; line-height: 1.4;">
+sudo usermod -aG plugdev $USER</pre>
+    </td>
+    <td style="padding: 15px; vertical-align: top;">
+      <div style="color: #1793d1; font-weight: bold; margin-bottom: 8px;">将当前用户加入 uucp 组</div>
+      <pre style="background: #2d2d2d; color: #f8f8f2; padding: 12px; border-radius: 6px; overflow-x: auto; margin: 8px 0; font-size: 13px; line-height: 1.4;">
+sudo usermod -aG uucp $USER</pre>
+    </td>
+  </tr>
+</table>
+</html>
 
-2. **运行**##### 已安装AppImage
+2. **运行**
+
+  ##### 已安装AppImage
 
    ```markdown
    # root权限运行
@@ -64,6 +130,7 @@ DM-USB2FDCAN上位机软件支持DM-USB2FDCAN系列CAN卡，支持在windows和l
   - 优化设备扫描和设备绑定逻辑，不会显示已打开设备，选取的串口号与libusb设备端口自动绑定
   - 现在CAN分析仪会区分展示普通FDCAN帧和FDCAN加速帧
   - 关于界面新增上位机软件说明书链接
+  - 开放通过串口修改极对数和减速比
 
   ##### 问题修复：
 

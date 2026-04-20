@@ -8,10 +8,10 @@
 
 ## Documentation / Resources
 - [SETUP.md](SETUP.md)
-- [DMTool-v2.0.3.4-arm64.app/](DMTool-v2.0.3.4-arm64.app/)
-- [DMTool-v2.0.3.4-x86_64.app/](DMTool-v2.0.3.4-x86_64.app/)
-- [DMTool v2.1.5.3-x86_64.AppImage](DMTool%20v2.1.5.3-x86_64.AppImage)
-- [DMTool v2.1.5.3.exe](DMTool%20v2.1.5.3.exe)
+- [DMTool-v2.1.6.0-arm64.app/](DMTool-v2.1.6.0-arm64.app/) 
+- [DMTool-v2.1.6.0-x86_64.app/](DMTool-v2.1.6.0-x86_64.app/)
+- [DMTool-v2.1.6.0-x86_64.AppImage](DMTool-v2.1.6.0-x86_64.AppImage)
+- [DMTool v2.1.6.0.exe](DMTool%20v2.1.6.0.exe)
 - [DMTool上位机软件说明书.pdf](DMTool上位机软件说明书.pdf)
 
 ## Quick Start

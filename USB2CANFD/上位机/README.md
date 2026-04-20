@@ -12,18 +12,18 @@
 
 - [SETUP.md](SETUP.md) - 上位机安装、权限和运行准备
 - [README.en.md](README.en.md) - 英文入口说明
-- [DMTool v2.1.5.3.exe](DMTool%20v2.1.5.3.exe) - 当前仓库中的 Windows 包
-- [DMTool v2.1.5.3-x86_64.AppImage](DMTool%20v2.1.5.3-x86_64.AppImage) - 当前仓库中的 Linux x86_64 包
-- [DMTool-v2.0.3.4-arm64.app/](DMTool-v2.0.3.4-arm64.app/)
-- [DMTool-v2.0.3.4-x86_64.app/](DMTool-v2.0.3.4-x86_64.app/)
+- [DMTool v2.1.6.0.exe](DMTool%20v2.1.6.0.exe) - 当前仓库中的 Windows 包
+- [DMTool-v2.1.6.0-x86_64.AppImage](DMTool-v2.1.6.0-x86_64.AppImage) - 当前仓库中的 Linux x86_64 包
+- [DMTool-v2.1.6.0-arm64.app/](DMTool-v2.1.6.0-arm64.app/)
+- [DMTool-v2.1.6.0-x86_64.app/](DMTool-v2.1.6.0-x86_64.app/)
 - [DMTool上位机软件说明书.pdf](DMTool上位机软件说明书.pdf) - 软件说明书
 - [../../../../docs/repository/mirror-scope.md](../../../../docs/repository/mirror-scope.md) - GitHub / Gitee 覆盖范围说明
 
 ## Quick Start
 
-- Windows 用户：先看 [SETUP.md](SETUP.md)，再下载 [DMTool v2.1.5.3.exe](DMTool%20v2.1.5.3.exe)。
-- Linux x86_64 用户：先看 [SETUP.md](SETUP.md)，再下载 [DMTool v2.1.5.3-x86_64.AppImage](DMTool%20v2.1.5.3-x86_64.AppImage)。
-- macOS 用户：Apple Silicon 选 [DMTool-v2.0.3.4-arm64.app/](DMTool-v2.0.3.4-arm64.app/)，Intel 选 [DMTool-v2.0.3.4-x86_64.app/](DMTool-v2.0.3.4-x86_64.app/)；开始前先看 [SETUP.md](SETUP.md)。
+- Windows 用户：先看 [SETUP.md](SETUP.md)，再下载 [DMTool v2.1.6.0.exe](DMTool%20v2.1.6.0.exe)。
+- Linux x86_64 用户：先看 [SETUP.md](SETUP.md)，再下载 [DMTool-v2.1.6.0-x86_64.AppImage](DMTool-v2.1.6.0-x86_64.AppImage)。
+- macOS 用户：Apple Silicon 选 [DMTool-v2.1.6.0-arm64.app/](DMTool-v2.1.6.0-arm64.app/)，Intel 选 [DMTool-v2.1.6.0-x86_64.app/](DMTool-v2.1.6.0-x86_64.app/)；开始前先看 [SETUP.md](SETUP.md)。
 - 想先看英文入口或软件说明书：打开 [README.en.md](README.en.md) 或 [DMTool上位机软件说明书.pdf](DMTool上位机软件说明书.pdf)。
 - 如果 GitHub 镜像里的版本列表和 Gitee 不一致：先看 [../../../../docs/repository/mirror-scope.md](../../../../docs/repository/mirror-scope.md)，再回 Gitee 查完整包。
 
