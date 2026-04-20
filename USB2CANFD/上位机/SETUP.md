@@ -10,18 +10,27 @@ DM-USB2FDCAN上位机软件支持DM-USB2FDCAN系列CAN卡，支持在windows和l
 
 1. **配置用户权限组（仅使用USB2FDCAN需要）**
 
-   ```markdown
-   # 查看设备信息
-   lsusb
-   # 创建 udev 规则文件
-   echo 'SUBSYSTEM=="usb", ATTR{idVendor}=="34b7", ATTR{idProduct}=="6877", MODE="0666", GROUP="plugdev"
-   SUBSYSTEM=="usb_device", ATTR{idVendor}=="34b7", ATTR{idProduct}=="6877", MODE="0666", GROUP="plugdev"' | sudo tee /etc/udev/rules.d/99-dm-fdcan.rules > /dev/null
-   # 重新加载 udev 规则
-   sudo udevadm control --reload-rules
-   sudo udevadm trigger
-   # 将当前用户加入 plugdev 组
-   sudo usermod -aG plugdev $USER
-   ```
+    ```markdown
+    # 查看设备信息
+    lsusb
+    eg.
+    Bus 001 Device 069: ID 34b7:6877 DaMiao-Tech DM-USB2FDCAN
+    VID 34b7, PID 6877
+    注意：单路模块与双路模块的PID与VID不同！！！
+    # 创建 udev 规则文件 (Debian/Ubuntu)
+    echo 'SUBSYSTEM=="usb", ATTR{idVendor}=="34b7", ATTR{idProduct}=="6877", MODE="0666", GROUP="plugdev"
+    SUBSYSTEM=="usb_device", ATTR{idVendor}=="34b7", ATTR{idProduct}=="6877", MODE="0666", GROUP="plugdev"' | sudo tee /etc/udev/rules.d/99-dm-fdcan.rules > /dev/null
+    # 创建 udev 规则文件 (Arch)
+    echo 'SUBSYSTEM=="usb", ATTR{idVendor}=="34b7", ATTR{idProduct}=="6877", MODE="0666", GROUP="uucp", TAG+="uaccess"
+    SUBSYSTEM=="usb_device", ATTR{idVendor}=="34b7", ATTR{idProduct}=="6877", MODE="0666", GROUP="uucp"', TAG+="uaccess" | sudo tee /etc/udev/rules.d/99-dm-fdcan.rules > /dev/null
+    注意：Arch用户需要自行运行 arch_lib_install.sh 下载依赖
+    # 重新加载 udev 规则
+    sudo udevadm control --reload-rules
+    sudo udevadm trigger
+    # 将当前用户加入 plugdev 组
+    sudo usermod -aG plugdev $USER
+    ```
+
 2. **运行**##### 已安装AppImage
 
    ```markdown
@@ -46,6 +55,25 @@ DM-USB2FDCAN上位机软件支持DM-USB2FDCAN系列CAN卡，支持在windows和l
    ```
 
 #### 版本更新说明
+
+- **[V2.1.6.0] - 2025.4.17**
+  ##### 主要更新：
+
+  - 优化了USB2CAN模块使用体验
+  - 优化波形控件
+  - 优化设备扫描和设备绑定逻辑，不会显示已打开设备，选取的串口号与libusb设备端口自动绑定
+  - 现在CAN分析仪会区分展示普通FDCAN帧和FDCAN加速帧
+  - 关于界面新增上位机软件说明书链接
+
+  ##### 问题修复：
+
+  - 修复了开关串口短暂卡顿问题
+  - 修复了总线通道占用率计算相关问题
+  - 修复了USB2CAN模块调试时波形延迟、锯齿现象和无法调节发送间隔时间的问题
+  - 修复CAN分析仪发送零长帧时的长度非法提示，解除发送数据动态长度限制，防止数据被误清空
+  - 修复自定义波特率配置逻辑
+  - 修复串口输出文本为等宽字体以正确展示串口打印信息
+  - 修复了使用FDCAN模块1007固件在3.2M下无法使用CAN与电机通讯的问题
 
 - **[V2.1.5.3] - 2025.12.15**
   ##### 问题修复：
@@ -278,10 +306,20 @@ DM-USB2FDCAN上位机软件支持DM-USB2FDCAN系列CAN卡，支持在windows和l
 
 1. **软件版权**本软件为闭源软件，版权归 [达妙科技有限公司] 所有。
 2. **第三方组件声明**
-   本软件开发过程中使用了遵循 GNU Lesser General Public License Version 3（LGPLv3）协议的 Qt 库，具体包括：QtCore、QtGui、QtSerialPort、QtCore5Compat 及 QtCharts。
+本软件核心程序为专有软件。开发过程中使用了遵循开源协议的开源库，具体包括：
 
-   Copyright (C) [2025] The Qt Company Ltd. 保留所有权利。Qt 及 Qt logo 均为 The Qt Company Ltd. 的商标。
+Qt 库：遵循 GNU Lesser General Public License version 2.1 (LGPLv2.1) 或版本 3 (LGPLv3)​ 协议。具体使用的模块有：QtCore, QtGui, QtSerialPort, QtCore5Compat，QSql，QOpenGL。
+Copyright (C) [2025] The Qt Company Ltd. 保留所有权利。Qt 及 Qt logo 均为 The Qt Company Ltd. 的商标。
+Qwt 库：遵循 GNU Lesser General Public License version 2.1 (LGPLv2.1)​ 协议。
+Copyright (C) 1991, 1999 Free Software Foundation, Inc. 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA。
+libusb 库：遵循 GNU Lesser General Public License version 2.1 (LGPLv2.1)​ 协议。
+Copyright © 2012-2025 libusb 保留所有权利。
 
-   根据 LGPLv3 协议规定，您有权获取本软件所使用的 Qt 库源代码，可通过 Qt 官方网站下载：[https://download.qt.io/archive/qt/](https://download.qt.io/archive/qt/)（请根据本软件实际使用的 Qt6.5.8 版本选择对应的源代码包）。
+用户权利与源代码获取
+根据其所遵循的 LGPL 协议规定，您有权获取、修改和重新分发这些开源库的源代码。您可以通过以下官方渠道获取与本软件所使用版本一致的源代码：
+Qt 库 (v6.5.3) 源代码：请访问 Qt 官方归档目录 https://download.qt.io/archive/qt/，并进入 6.5/子目录下载对应的源代码包。
+Qwt 库 (v6.3.0) 源代码：请访问 Qwt 项目官方网站 https://qwt.sourceforge.io/或其源代码仓库下载。
+libusb 库 (v1.0.27) 源代码：请访问 libusb 项目官方网站 https://libusb.info/或其源代码仓库下载。
 
-   本软件采用动态链接方式调用 Qt 库，用户可直接替换程序目录中相关的 Qt DLL 文件，以使用经修改或适配后的 Qt 库版本，此机制符合 LGPLv3 协议要求。
+许可证合规性说明
+本软件采用动态链接方式调用上述所有开源库。用户可直接替换程序目录中相关的动态链接库文件（如 Windows 平台的 DLL 文件），以使用经修改或适配后的库版本。尽管本软件混合使用了 LGPLv2.1 和 LGPLv3 协议的库，但根据 LGPLv3 第 3 节的规定，LGPLv2.1 的库可以被合法地用于本环境。​ 此机制符合 LGPL 系列协议关于用户自由度的核心要求。
