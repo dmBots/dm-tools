@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "P67qaTTpecg=",
+  "success": true,
+  "projectFilePath": "E:\\达妙工作目录\\Git仓库\\dm-tools\\DM_DeviceSDK\\CSharp\\demo\\DM_DeviceSDK_Demo.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\93094\\.nuget\\packages\\dm_devicesdk_csharp\\1.0.0\\dm_devicesdk_csharp.1.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

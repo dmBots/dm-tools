@@ -1,0 +1,17 @@
+E:\CSharp_Projects\DM_DeviceSDK_CSharp\DM_DeviceSDK_Demo\bin\Release\net8.0\DM_DeviceSDK_Demo.exe
+E:\CSharp_Projects\DM_DeviceSDK_CSharp\DM_DeviceSDK_Demo\bin\Release\net8.0\DM_DeviceSDK_Demo.deps.json
+E:\CSharp_Projects\DM_DeviceSDK_CSharp\DM_DeviceSDK_Demo\bin\Release\net8.0\DM_DeviceSDK_Demo.runtimeconfig.json
+E:\CSharp_Projects\DM_DeviceSDK_CSharp\DM_DeviceSDK_Demo\bin\Release\net8.0\DM_DeviceSDK_Demo.dll
+E:\CSharp_Projects\DM_DeviceSDK_CSharp\DM_DeviceSDK_Demo\bin\Release\net8.0\DM_DeviceSDK_Demo.pdb
+E:\CSharp_Projects\DM_DeviceSDK_CSharp\DM_DeviceSDK_Demo\bin\Release\net8.0\DM_DeviceSDK_CSharp.dll
+E:\CSharp_Projects\DM_DeviceSDK_CSharp\DM_DeviceSDK_Demo\obj\Release\net8.0\DM_DeviceSDK_Demo.csproj.AssemblyReference.cache
+E:\CSharp_Projects\DM_DeviceSDK_CSharp\DM_DeviceSDK_Demo\obj\Release\net8.0\DM_DeviceSDK_Demo.GeneratedMSBuildEditorConfig.editorconfig
+E:\CSharp_Projects\DM_DeviceSDK_CSharp\DM_DeviceSDK_Demo\obj\Release\net8.0\DM_DeviceSDK_Demo.AssemblyInfoInputs.cache
+E:\CSharp_Projects\DM_DeviceSDK_CSharp\DM_DeviceSDK_Demo\obj\Release\net8.0\DM_DeviceSDK_Demo.AssemblyInfo.cs
+E:\CSharp_Projects\DM_DeviceSDK_CSharp\DM_DeviceSDK_Demo\obj\Release\net8.0\DM_DeviceSDK_Demo.csproj.CoreCompileInputs.cache
+E:\CSharp_Projects\DM_DeviceSDK_CSharp\DM_DeviceSDK_Demo\obj\Release\net8.0\DM_Devic.AF5E9963.Up2Date
+E:\CSharp_Projects\DM_DeviceSDK_CSharp\DM_DeviceSDK_Demo\obj\Release\net8.0\DM_DeviceSDK_Demo.dll
+E:\CSharp_Projects\DM_DeviceSDK_CSharp\DM_DeviceSDK_Demo\obj\Release\net8.0\refint\DM_DeviceSDK_Demo.dll
+E:\CSharp_Projects\DM_DeviceSDK_CSharp\DM_DeviceSDK_Demo\obj\Release\net8.0\DM_DeviceSDK_Demo.pdb
+E:\CSharp_Projects\DM_DeviceSDK_CSharp\DM_DeviceSDK_Demo\obj\Release\net8.0\DM_DeviceSDK_Demo.genruntimeconfig.cache
+E:\CSharp_Projects\DM_DeviceSDK_CSharp\DM_DeviceSDK_Demo\obj\Release\net8.0\ref\DM_DeviceSDK_Demo.dll
