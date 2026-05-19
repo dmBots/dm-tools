@@ -5,7 +5,7 @@
 ## 概述
 
 - 本目录是达妙 USB 类设备通用 SDK 的总入口。
-- 如果你是要把 USB2CANFD、USB2CANFD_Dual、ECAT2CANFD 等设备接到自己的软件里，先从这里判断是否该走通用 SDK，而不是旧版 USB2CANFD 专用 SDK。
+- 如果你是要把 USB2CANFD、USB2CANFD_Dual、LinkX4C等设备接到自己的软件里，先从这里判断是否该走通用 SDK，而不是旧版 USB2CANFD 专用 SDK。
 - 当前公开的高频入口是 [C&C++/README.md](C&C++/README.md)；GitHub 镜像覆盖差异请看 [../../../docs/repository/mirror-scope.md](../../../docs/repository/mirror-scope.md)。
 
 ## 文档 / 资源
