@@ -38,6 +38,7 @@ DM_Device_SDK 是用于控制 CAN/CAN FD 设备的软件开发工具包，支持
 
 - **Linux**（Ubuntu 22.04+）
 - **Windows**（Windows 10/11）
+- **MacOS**
 
 ## SDK 基础概念
 
