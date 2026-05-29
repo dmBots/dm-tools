@@ -124,6 +124,36 @@ sudo usermod -aG uucp $USER</pre>
 
 #### Version Update Notes
 
+- **[V2.1.6.7] - 2025.5.29**
+  ##### Major Updates:
+
+  - Added mouse wheel zoom, mouse drag, point auto-snapping, slope calculation, and history data display features to the waveform control
+
+- **[V2.1.6.6] - 2025.5.27**
+  ##### Major Updates:
+
+  - Removed the read ID and set ID buttons from the debug interface
+
+  ##### Bug Fixes:
+
+  - Fixed waveform control lag and excessive memory usage
+  - Fixed missing 125K baud rate setting for USB2CAN modules
+
+- **[V2.1.6.5] - 2025.5.20**
+  ##### Bug Fixes:
+
+  - Fixed incorrect binding issue between dual USB2CAN modules
+
+- **[V2.1.6.3] - 2025.5.18**
+  ##### Major Updates:
+
+  - Adapted FDCAN module for opening and upgrading special SLCAN and GSUSB firmware; the bottom-left status bar now displays the special firmware name
+
+  ##### Bug Fixes:
+
+  - Fixed FDCAN module firmware upgrade issues
+  - Fixed abnormal behavior after multiple calibrations of the output axis
+
 - **[V2.1.6.2] - 2025.5.12**
   ##### Major Updates:
 
