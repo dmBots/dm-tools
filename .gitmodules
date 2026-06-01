@@ -1,0 +1,6 @@
+[submodule "DM-LinkX-4C"]
+	path = DM-LinkX-4C
+	url = ../dm-linkx-4c.git
+[submodule "DM_DeviceSDK"]
+	path = DM_DeviceSDK
+	url = ../dm-device-sdk.git
