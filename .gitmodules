@@ -4,3 +4,6 @@
 [submodule "DM_DeviceSDK"]
 	path = DM_DeviceSDK
 	url = ../dm-device-sdk.git
+[submodule "电机调试工具"]
+	path = 电机调试工具
+	url = ../motor-debugging-tool.git
