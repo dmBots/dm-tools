@@ -11,7 +11,7 @@
 - [gs_usb_sppe_Orin_NX/README_en.md](gs_usb_sppe_Orin_NX/README_en.md) - Jetson Orin English notes
 - [gs_usb_sppe_RK_board/README_zh-CN.md](gs_usb_sppe_RK_board/README_zh-CN.md) - RK3588 中文说明
 - [gs_usb_sppe_RK_board/README_en.md](gs_usb_sppe_RK_board/README_en.md) - RK3588 English notes
-- [../../../docs/repository/mirror-scope.md](../../../docs/repository/mirror-scope.md) - GitHub / Gitee 覆盖范围说明
+- [GitHub / Gitee 覆盖范围说明](https://gitee.com/kit-miao/damiao/blob/master/docs/repository/mirror-scope.md) - 双仓覆盖范围说明
 
 ## 快速开始
 

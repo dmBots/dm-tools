@@ -9,5 +9,5 @@
 ## 路线建议
 
 - 如果你只是维护旧版 USB2CANFD 接入，继续从本目录进入对应语言和平台分支。
-- 如果你要做更新的通用 USB 设备接入，优先转到 [../../DM_DeviceSDK/README.md](../../DM_DeviceSDK/README.md)。
-- 如果你需要判断 GitHub / Gitee 哪边资料更完整，先看 [../../../../docs/repository/mirror-scope.md](../../../../docs/repository/mirror-scope.md)。
+- 如果你要做更新的通用 USB 设备接入，优先转到 [DM Device SDK](https://gitee.com/kit-miao/dm-device-sdk)。
+- 如果你需要判断 GitHub / Gitee 哪边资料更完整，先看 [GitHub / Gitee 覆盖范围说明](https://gitee.com/kit-miao/damiao/blob/master/docs/repository/mirror-scope.md)。
